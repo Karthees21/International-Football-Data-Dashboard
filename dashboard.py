@@ -55,7 +55,7 @@ team_performance['Clean Sheets'] = team_performance['Team'].map(clean_sheets).fi
 # Initialize Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions = True
-
+server=app.server
 
 # Updated Layout
 app.layout = dbc.Container([
