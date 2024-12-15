@@ -126,12 +126,12 @@ def surface_3d_chart(selected_team):
     ]
 
     # 3D Surface Chart
-    x = np.array([0, 1, 2, 3, 4])
-    y = np.array([0, 1])
-    z = np.array([values, values])
+    x = np.array([0, 1, 2, 3, 4]) # X-axis: Metrics indices
+    y = np.array([0, 1]) # Y-axis: Dummy values for duplication
+    z = np.array([values, values]) # Z-axis: Values for the metrics
 
     fig = go.Figure(data=[go.Surface(
-        z=z, x=x, y=y, colorscale='Viridis'
+        z=z, x=x, y=y, colorscale='Viridis', hoverinfo="x+z"
     )])
 
     # Layout adjustments
