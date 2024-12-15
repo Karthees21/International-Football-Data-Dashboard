@@ -82,7 +82,7 @@ app.layout = dbc.Container([
                         options=[{'label': team, 'value': team} for team in team_performance['Team']],
                         value='Argentina',
                         clearable=False,
-                        style={'width': '150px', 'display': 'inline-block'}
+                        style={'width': '300px', 'display': 'inline-block','minHeight': '40px'}
                     )
                 ],
                 style={
@@ -138,12 +138,12 @@ def surface_3d_chart(selected_team):
     fig.update_layout(
         title=f"3D Surface Chart for {selected_team}",
         scene=dict(
-            xaxis=dict(tickvals=list(range(len(metrics))), ticktext=metrics),
+            xaxis=dict(tickvals=list(range(len(metrics))), ticktext=metrics, title=""),
             yaxis=dict(title=""),
             zaxis=dict(title="Values"),
         ),
         margin=dict(t=30, l=10, r=10, b=30),
-        height=350
+        height=250
     )
     return fig
 
