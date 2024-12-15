@@ -142,8 +142,8 @@ def surface_3d_chart(selected_team):
             yaxis=dict(title=""),
             zaxis=dict(title="Values"),
         ),
-        margin=dict(t=30, l=10, r=10, b=30),
-        height=250
+        margin=dict(t=30, l=10, r=10, b=40),
+        height=400
     )
     return fig
 
@@ -370,11 +370,7 @@ def scatter_bubble_chart(selected_team):
         height=350
     )
     return fig
-
-@app.server.route("/test")
-def test():
-    return "App is running!"
-
+    
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))  # Fetch PORT from environment, default to 10000
