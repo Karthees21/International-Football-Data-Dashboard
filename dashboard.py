@@ -370,6 +370,9 @@ def scatter_bubble_chart(selected_team):
     )
     return fig
 
+@app.server.route("/test")
+def test():
+    return "App is running!"
 
 
 if __name__ == '__main__':
