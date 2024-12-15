@@ -142,8 +142,8 @@ def surface_3d_chart(selected_team):
             yaxis=dict(title=""),
             zaxis=dict(title="Values"),
         ),
-        margin=dict(t=30, l=10, r=10, b=40),
-        height=400
+        margin=dict(t=30, l=10, r=10, b=35),
+        height=350
     )
     return fig
 
